@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Layout from "./layout/Layout.component";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from "./pages/home/Home.page";
+import Register from "./pages/register/Register.page";
+import Login from "./pages/login/Login.page";
+import NotFound from "./pages/404/NotFound.page";
+import { theme } from './layout/Theme';
+import { ThemeProvider } from 'styled-components';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+       <BrowserRouter>
+         <ThemeProvider theme={theme}>
+              <Layout>
+                      <Switch>
+                          <Route path="/" component={Home} exact />
+                          <Route path="/login" component={Login} />
+                          <Route path="/register" component={Register} />
+                          <Route path="*" component={NotFound} exact={true} />
+                      </Switch>
+              </Layout>
+         </ThemeProvider>
+       </BrowserRouter>
   );
 }
 
