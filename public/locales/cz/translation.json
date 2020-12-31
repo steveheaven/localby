@@ -1,0 +1,12 @@
+{
+  "register": "Registrovat",
+  "login": "Přihlásit",
+  "searchPlaceholder": "Hledejte název, kategorii nebo značku...",
+  "searchButton": "Hledat",
+  "food": "Jídlo & Potraviny",
+  "home": "Dům & Styl",
+  "clothing": "Oblečení & Boty",
+  "jewelry": "Šperky & Doplňky",
+  "crafts": "Řemesla & Služby",
+  "other": "Ostatní"
+}

@@ -2,6 +2,7 @@ import { FC, ReactElement, ReactHTMLElement } from "react";
 import styled from "styled-components";
 import pouring from "../../assets/videos/pouring.mp4";
 import Sidebar from "../../layout/Sidebar.component";
+import Divider from "../../lib/divider/Divider.component";
 
 const MaxWidth1200Px = styled.div`
 max-width: ${props => props.theme.maxWidth};
@@ -14,7 +15,7 @@ height: 300px;
 overflow: hidden;
 `
 const Video = styled.video`
-background-color: red;
+/* background-color: red; */
 height: auto;
 width: 100%;
 background-size: cover;
@@ -34,6 +35,7 @@ const Home: FC<HomeType> = ({children}) => {
               Your browser does not support the video tag.
          </Video>
        </VideoWrap>
+         <Divider type="horizontal" />
         <MaxWidth1200Px>
           <Sidebar></Sidebar>
         </MaxWidth1200Px>

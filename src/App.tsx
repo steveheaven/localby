@@ -8,10 +8,13 @@ import Login from "./pages/login/Login.page";
 import NotFound from "./pages/404/NotFound.page";
 import { theme } from './layout/Theme';
 import { ThemeProvider } from 'styled-components';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 
 function App() {
   return (
+    <Provider store={store}>
        <BrowserRouter>
          <ThemeProvider theme={theme}>
               <Layout>
@@ -24,6 +27,7 @@ function App() {
               </Layout>
          </ThemeProvider>
        </BrowserRouter>
+    </Provider>
   );
 }
 

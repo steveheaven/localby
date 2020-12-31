@@ -1,4 +1,4 @@
-import { FC, Fragment } from "react";
+import { ChangeEvent, FC, Fragment, useState } from "react";
 import styled from "styled-components";
 
 
@@ -7,7 +7,9 @@ type SelectType = {
   width?: string,
   height?: string,
   radius?: string,
-  color?: string
+  color?: string,
+  onChange?: (e: ChangeEvent<HTMLSelectElement>) => void,
+  value?: string
 }
 
     const StyledSelect = styled.select<SelectType>`
@@ -19,13 +21,11 @@ type SelectType = {
     border-radius: ${props => props.radius ? props.radius : "6px"}; 
     color: ${props => props.color ? props.color : props.theme.color.black};
     `
-const Select: FC<SelectType> = ({options, radius , width, height, color}) => {
-
+const Select: FC<SelectType> = ({options, radius , width, height, color, onChange, value}) => {
    return (
        <>
-         <StyledSelect width={width} radius={radius} height={height} color={color}>
+         <StyledSelect width={width} radius={radius} height={height} color={color} onChange={onChange} value={value}>
            {options?.map((option, i) => {
-   console.log(option)
              return (
                <Fragment key={i}>
                    <option value={option}>{option}</option>

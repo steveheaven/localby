@@ -1,0 +1,12 @@
+{
+  "register": "Register",
+  "login": "Log in",
+  "searchPlaceholder": "Search the product name, category or brand...",
+  "searchButton": "Search",
+  "food": "Food & Groceries",
+  "home": "Home & Lifestyle",
+  "clothing": "Clothing & Shoes",
+  "jewelry": "Jewelry & Accessories",
+  "crafts": "Crafts & Services",
+  "other": "Other"
+}

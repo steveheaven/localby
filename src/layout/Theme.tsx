@@ -8,7 +8,7 @@ export const theme = {
         darkShade: '#252423' /* Shark */,
         darkAccent: '#ac7742' /* Cape Palliser */,
         primary: '#876351' /* Shadow */,
-        black: '#232525' /* Shark */,
+        black: '#3a3a3a' /* Shark */,
         success: '#5e9850' /* Fruit Salad */,
         warning: '#db8818' /* Zest */,
         danger: '#f44336' /* Pomegranate */,

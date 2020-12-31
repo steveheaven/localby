@@ -2,7 +2,7 @@ import { FC } from "react";
 import styled from "styled-components";
 
 
-type SelectType = {
+type InputType = {
   width?: string,
   height?: string,
   radius?: string,
@@ -10,20 +10,20 @@ type SelectType = {
   placeholder?: string
 }
 
-    const StyledSelect = styled.button<SelectType>`
+    const StyledInput = styled.button<InputType>`
     width: ${props => props.width ? props.width : "auto"};
     height: ${props => props.height ? props.height : "auto"};
     border: none;
     outline: none;
     color: ${props => props.color ? props.color : props.theme.color.black};
     `
-const Select: FC<SelectType> = ({radius , width, height, color, placeholder}) => {
+const Input: FC<InputType> = ({radius , width, height, color, placeholder}) => {
 
    return (
        <>
-         <StyledSelect width={width} radius={radius} height={height} color={color} placeholder={placeholder}/>
+         <StyledInput width={width} radius={radius} height={height} color={color} placeholder={placeholder}/>
        </>
    );
 }
 
-export default Select;
+export default Input;

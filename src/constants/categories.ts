@@ -1,23 +1,29 @@
+import foodImg from "../assets/images/category_food.png";
+import homeImg from "../assets/images/house-24px.svg";
+import clothingImg from "../assets/images/checkroom-24px.svg";
+import jewelryImg from "../assets/images/category_jewelry.png";
+import craftsImg from "../assets/images/crafts.png";
+
 export default [{
-    name: "Food & Groceries",
-    icon: 'category_food.png',
+    name: "food",
+    icon: foodImg,
 }, {
-    name: "Home & Lifestyle",
-    icon: 'house-24px.svg',
+    name: "home",
+    icon: homeImg,
 },
 {
-    name: "Clothing & Shoes",
-    icon: 'checkroom-24px.svg',
+    name: "clothing",
+    icon: clothingImg,
 },
 {
-    name: "Jewelry & Accessories",
-    icon: 'category_jewelry.png',
+    name: "jewelry",
+    icon: jewelryImg,
 },
 {
-    name: "Crafts & Services",
-    icon: 'crafts.png',
+    name: "crafts",
+    icon: craftsImg,
 },
 {
-    name: "Other",
+    name: "other",
     icon: '',
 }];
