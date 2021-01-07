@@ -2,7 +2,7 @@ import { SET_CATEGORY } from '../types/category.types';
 
 
     const initialState = {
-        category: "food",
+        category: "",
     };
 
     const categoryReducer = (state = initialState, action: {type: string, payload: string}) => {

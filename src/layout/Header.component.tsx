@@ -38,7 +38,7 @@ color: ${props => props.theme.color.main};
 border-radius: 0;
 border: 0.5px solid ${props => props.theme.color.main};
 outline: none;
-padding: 10px 30px 10px 30px;
+padding: 11px 30px 10px 30px;
 position: relative;
 top: 1px;
 z-index: 1;

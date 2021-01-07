@@ -6,6 +6,7 @@ import {useTranslation} from "react-i18next";
 import { connect } from "react-redux";
 import { setCategory } from "../redux/actions/category.action";
 import { collapseTextChangeRangesAcrossMultipleVersions } from "typescript";
+import Select from "../lib/select/Select.component";
 
 const Wrap = styled.div`
 background-color: ${props => props.theme.color.main};
@@ -28,23 +29,31 @@ const Category = styled.li<{active?: boolean}>`
 float: left;
 margin: 0 20px 0 13px;
 font-size: 0.9em;
+box-sizing: border-box;
 border-bottom: ${props => props.active ? "2px solid white" : "none"};
 padding: ${props => props.active ? "0 5px 10px 5px" : "0"};
+font-size: ${props => props.active ? "1em" : "0.9em"};
+font-weight: ${props => props.active ? "bold" : "normal"};
+&:hover {
+font-weight: bold;
+transition: 0.2s;
+}
 `
 const Icon = styled.div`
 width: 20px;
 height: 20px;
 position: relative;
-top: -10px;
+top: -7px;
 float: left;
 `
 const Image = styled.img`
 height: auto;
-width: 30px;
+width: 27px;
 filter: invert(100%);
 `
-const Redirect = styled(Link)<{active?: boolean}>`
+const Redirect = styled.div`
 color: white;
+cursor: pointer;
 `
 
 type NavbarType = {
@@ -54,15 +63,19 @@ type NavbarType = {
 
 const Navbar: FC<NavbarType> = ({activeCategory, setCategory}) => {
 
+  const [isActive, setIsActive] = useState(false);
   const {t} = useTranslation();
    return (
      <Wrap>
            <MaxWidth1200Px>
              <List>
                {categories.map((category, i) => {
+                 if (i > 4) {
+                   return;
+                 }
                  return (
                    <Fragment key={i}>
-                     <Redirect to="/register" onClick={() => {
+                     <Redirect onClick={() => {
                        setCategory(category.name)
                      }}>
                        <Icon><Image src={category.icon} /></Icon>
@@ -71,6 +84,7 @@ const Navbar: FC<NavbarType> = ({activeCategory, setCategory}) => {
                    </Fragment>
                  ); 
                })}
+               <Category>Other {" >"}</Category>
              </List>
            </MaxWidth1200Px>
        </Wrap>

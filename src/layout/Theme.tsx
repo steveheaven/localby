@@ -4,7 +4,7 @@ export const theme = {
     color: {
         white: 'rgb(255, 255, 255)' /* Cararra */,
         lightAccent: '#949b92' /* Stack */,
-        main: '#86b9a7' /* Shadow */,
+        main: '#428068' /* Shadow */,
         darkShade: '#252423' /* Shark */,
         darkAccent: '#ac7742' /* Cape Palliser */,
         primary: '#876351' /* Shadow */,
@@ -13,7 +13,7 @@ export const theme = {
         warning: '#db8818' /* Zest */,
         danger: '#f44336' /* Pomegranate */,
     },
-    maxWidth: "1200px"
+    maxWidth: "1300px"
 };
 
 export type Theme = typeof theme;
