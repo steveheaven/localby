@@ -4,7 +4,7 @@ export const theme = {
     color: {
         white: 'rgb(255, 255, 255)' /* Cararra */,
         lightAccent: '#949b92' /* Stack */,
-        main: '#428068' /* Shadow */,
+        main: ' #86B9A7' /* Shadow */,
         darkShade: '#252423' /* Shark */,
         darkAccent: '#ac7742' /* Cape Palliser */,
         primary: '#876351' /* Shadow */,
