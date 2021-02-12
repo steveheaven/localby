@@ -81,7 +81,7 @@ const ProductSection: FC<ProductSectionType> = ({children}) => {
    let mockedProducts = [];
    for (let i = 0; i < 60; i++) {
       mockedProducts.push({
-        productName: "Ceramic plate",
+        productName: "Plates",
         description: "Brown plate, radius 30cm, hand made for regular use",
         seller: "John Doe",
         sellerProfileImage: "path",
