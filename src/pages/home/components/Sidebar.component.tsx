@@ -8,10 +8,10 @@ import Subcategory from "./Subcategory.component";
 
 const SidebarWrap = styled.div`
 /* background-color: red; */
-width: 230px;
+width: 330px;
 height: auto;
-float: left;
-border-radius: 6px;
+border-top-right-radius: 6px;
+border-bottom-right-radius: 6px;
 padding: 10px;
 box-sizing: border-box;
 box-shadow: 1px 1px 4px 1px grey;

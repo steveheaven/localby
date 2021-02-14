@@ -6,8 +6,11 @@ import Divider from "../../lib/divider/Divider.component";
 import ProductCard from "./containers/ProductSection.container";
 
 const MaxWidth = styled.div`
-max-width: ${props => props.theme.maxWidth};
-margin: 0 auto;
+/* max-width: ${props => props.theme.maxWidth}; */
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: start;
 `
 const VideoWrap = styled.div`
 /* background-color: ${props => props.theme.color.black}; */

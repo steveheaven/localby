@@ -9,15 +9,13 @@ const Wrap = styled.span`
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-width: 73vw;
+width: fit-content;
 /* background-color: red; */
-float: right;
 ` 
-
 const CardWrap = styled.div`
-width: 220px;
+width: 19%;
 justify-content: space-between;
-height: 350px;
+height: 550px;
 margin: 0 5px 5px 5px;
 border-radius: 6px;
 /* padding: 10px; */
@@ -36,8 +34,25 @@ const CardBody = styled.div`
 width: 100%;
 border-radius: 0 0 6px 6px;
 height: 55%;
-padding:10px;
+padding: 10px;
 box-sizing: border-box;
+display: flex;
+flex-direction: column;
+justify-content: center;
+`
+const CartBox = styled.div `
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: space-between;
+`
+const CardBoxContainer = styled.div `
+width: 49%;
+`
+const OtherProductsBox = styled.div `
+width: 50%;
+display: flex;
+padding-left: 5px;
 `
 const ProductName = styled.div`
 font-weight: bold;
@@ -46,12 +61,12 @@ margin-bottom: 5px;
 `
 const ProductDescription = styled.div`
 color: ${props => props.theme.color.black};
-font-size: 0.8em;
+font-size: 1em;
 margin-bottom: 10px;
 `
 const Seller = styled.div`
 color: ${props => props.theme.color.main};
-font-size: 0.9em;
+font-size: 1.5em;
 `
 const RatingWrap = styled.span`
 padding-top: 10px;
@@ -120,17 +135,25 @@ const ProductSection: FC<ProductSectionType> = ({children}) => {
                                       starColor="#f3cc1f"
                               />
                     </RatingWrap>
-                     <VotesCount>({el.votesCount})</VotesCount>
-                     <Button value="Other products" radius="40px" height="23px" inverted/>
-                     <Button value="Put into cart" margin="13px 0 0 0" radius="50px" width="150px" height="25px"/>
-                     <Price>${el.price}</Price>
+                    <VotesCount>({el.votesCount})</VotesCount>
+                    <OtherProductsBox>
+                      <Button value="Other products" radius="40px" height="23px" inverted/>
+                    </OtherProductsBox>  
+                    <CartBox>
+                      <CardBoxContainer>
+                        <Button value="Put into cart" margin="13px 0 0 0" radius="50px" width="150px" height="25px"/>
+                      </CardBoxContainer>
+                      <CardBoxContainer>
+                        <Price>${el.price}</Price>
+                      </CardBoxContainer>
+                    </CartBox>
                   </CardBody>
                 </CardWrap>
               )
-           })}
-         </Wrap>
-       </>
-   );
+            })}
+          </Wrap>
+        </>
+    );
 }
 
 export default ProductSection;
