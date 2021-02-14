@@ -3,7 +3,8 @@ import styled from "styled-components";
 import pouring from "../../assets/videos/pouring.mp4";
 import Sidebar from "./components/Sidebar.component";
 import Divider from "../../lib/divider/Divider.component";
-import ProductCard from "./containers/ProductSection.container";
+import ProductCard from "./containers/ProductSection.container"
+import MaximumWidth from "../../lib/global/MaximumWidth"
 
 const MaxWidth = styled.div`
 /* max-width: ${props => props.theme.maxWidth}; */
@@ -78,10 +79,12 @@ const Home: FC<HomeType> = ({children}) => {
          </Video>
        </VideoWrap>
          <Divider type="horizontal" />
-        <MaxWidth>
-          <Sidebar></Sidebar>
-          <ProductCard/>
-        </MaxWidth>
+
+          <MaxWidth>
+            <Sidebar></Sidebar>
+            <ProductCard/>
+          </MaxWidth>
+
        </>
    );
 }

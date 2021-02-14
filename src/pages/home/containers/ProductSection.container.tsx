@@ -13,9 +13,9 @@ width: fit-content;
 /* background-color: red; */
 ` 
 const CardWrap = styled.div`
-width: 19%;
+width: 275px;
 justify-content: space-between;
-height: 550px;
+height: 450px;
 margin: 0 5px 5px 5px;
 border-radius: 6px;
 /* padding: 10px; */
@@ -136,9 +136,9 @@ const ProductSection: FC<ProductSectionType> = ({children}) => {
                               />
                     </RatingWrap>
                     <VotesCount>({el.votesCount})</VotesCount>
-                    <OtherProductsBox>
-                      <Button value="Other products" radius="40px" height="23px" inverted/>
-                    </OtherProductsBox>  
+
+                      <Button value="Other products" radius="40px" height="23px" width="150px" inverted/>
+
                     <CartBox>
                       <CardBoxContainer>
                         <Button value="Put into cart" margin="13px 0 0 0" radius="50px" width="150px" height="25px"/>
